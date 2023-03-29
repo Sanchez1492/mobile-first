@@ -183,9 +183,50 @@ main {
 
 .main-currency-table .currency-table--container td {
     width: 50%;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 500;
-    line-height: 1.9rem;
+    line-height: 1.7rem;
     color: var(--grey);
-    background-color: var(--off-white);
+    background-color: var(--just-white);
+    padding: 10px 12px;
+}
+
+.table__top-left {
+    border-radius: 8px 0 0 0;
+}
+
+.table__top-right {
+    border-radius: 0 8px  0 0;
+}
+
+.table__bottom-left {
+    border-radius: 0 0 0 8px;
+}
+
+.table__bottom-right {
+    border-radius: 0 0 8px 0;
+}
+
+.main-currency-table .currency-table--container .table__right {
+    font-weight: 300;
+}
+
+#table-1,
+#table-3,
+#table-4 {
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    margin-left: 10px;
+    background-image: url("./assets/icons/trending-down.svg");
+    background-repeat: no-repeat;
+}
+
+#table-2 {
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    margin-left: 10px;
+    background-image: url("./assets/icons/trending-up.svg");
+    background-repeat: no-repeat;
 }
