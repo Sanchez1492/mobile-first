@@ -118,6 +118,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .main--exchange-container .main--exchange-container--title {
@@ -158,16 +159,18 @@ main {
     color: var(--dark-grey);
 }
 
-.main-currency-table {
+.main-currency-table,
+.main-comision-table {
     width: 70%;
     min-width: 235px;
     max-width: 500px;
-    height: 360px;
+    height: 260px;
     margin: 0 auto; /*No agrega margen arriba y abajo, pero de los costados se posiciona automaticamente para quedar en el centro*/
     font-family: "Inter", sans-serif;
 }
 
-.main-currency-table .currency-table--title {
+.main-currency-table .currency-table--title,
+.main-comision-table .comision-table--title {
     margin-top: 40px;
     margin-bottom: 25px;
     font-size: 1.8rem;
@@ -176,16 +179,18 @@ main {
     color: var(--bitcoin-orange);
 }
 
-.main-currency-table .currency-table--container table{
+.main-currency-table .currency-table--container table,
+.main-comision-table .comision-table--container table{
     width: 100%;
     height: 100%;
 }
 
-.main-currency-table .currency-table--container td {
+.main-currency-table .currency-table--container td,
+.main-comision-table .comision-table--container td {
     width: 50%;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 500;
-    line-height: 1.7rem;
+    line-height: 1.9rem;
     color: var(--grey);
     background-color: var(--just-white);
     padding: 10px 12px;
@@ -207,8 +212,11 @@ main {
     border-radius: 0 0 8px 0;
 }
 
-.main-currency-table .currency-table--container .table__right {
+.main-currency-table .currency-table--container .table__right,
+.main-comision-table .comision-table--container .table__right {
     font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
 }
 
 #table-1,
@@ -229,4 +237,125 @@ main {
     margin-left: 10px;
     background-image: url("./assets/icons/trending-up.svg");
     background-repeat: no-repeat;
+}
+
+.main--exchange-container .currency-table--date,
+.main--exchange-container .comision-table--date {
+    padding: 8px;
+    gap: 10px;
+    width: 183px;
+    height: 31px;
+    background-color: var(--soft-orange);
+    border-radius: 8px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin: 25px auto;
+    color: var(--warm-black);
+}
+
+.main-comision-table .comision-table--title {
+    color: var(--secondary-blue);
+}
+
+.main--exchange-container .comision-table--date {
+    background-color: var(--soft-blue);
+}
+
+.main-product-detail {
+    position: relative;
+    width: 90%;
+    min-width: 320px;
+    height: auto;
+    padding: 20px 10px;
+    background-color: var(--black);
+}
+
+.main-product-detail .potato {
+    position: absolute;
+    width: 40px;
+    height: 24px;
+    top: calc(0% - 12px);
+	left: calc(50% - 20px);
+    background-image: url("./assets/icons/batata.svg");
+}
+
+.main-product-detail .main-product-detail--title {
+    width: 288px;
+    height: auto;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 25px auto;
+    color: var(--just-white)
+}
+
+.main-product-detail .main-product-detail--subtitle {
+    width: 288px;
+    height: auto;
+    font-size: 1.4rem;
+    line-height: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: #808080;
+}
+
+.product-detail--card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 90%;
+    min-width: 288px;
+    max-width: 500px;
+    height: auto;
+    margin-top: 25px;
+    border-radius: 4px;
+    background-color: var(--warm-black);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+.product-detail--card span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-top: 14px;
+    margin-left: 16px;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.clock {
+    background-image: url("./assets/icons/clock.svg");
+}
+
+.eye {
+    background-image: url("./assets/icons/eye.svg");
+}
+
+.dollar {
+    background-image: url("./assets/icons/dollar-sign.svg");
+}
+
+.check {
+    background-image: url("./assets/icons/check-circle.svg");
+}
+
+.product-detail--card .product--card-title {
+    width: 288px;
+    font-size: 1.8rem;
+    inline-size: 1.8rem;
+    font-weight: 700;
+    margin-left: 16px;
+    color: var(--just-white);
+}
+
+.product-detail--card .product--card-body {
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+    margin-left: 16px;
+    color: #808080;
 }
